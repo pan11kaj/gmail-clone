@@ -1,15 +1,14 @@
 .navbar{
     width: 100%;
     position: relative;
+    top: 0;
+    left: 0;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 0.6px solid gray;
-    text-overflow: ellipsis;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
+    border-bottom: 0.5px solid gray;
     min-width: min-content;
 }
 .gmail-logo{

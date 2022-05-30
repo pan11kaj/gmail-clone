@@ -15,7 +15,8 @@ export default function DrawerNavigator({state}) {
     const handleCollapse = ()=>itemcollapse?setItemCollapse(false):setItemCollapse(true);
 
   return (
-        <Drawer className='drawer' variant="permanent" PaperProps={{style:{position:"fixed",top:"80px",width:state}}} >
+      <div style={{width:"200px"}}>
+        <Drawer className='drawer' variant="permanent" PaperProps={{style:{position:"fixed",top:"77px",width:state}}} >
             <List className="drawer-list-1">
             {
                 drawer_items.map(data=>{
@@ -87,6 +88,7 @@ export default function DrawerNavigator({state}) {
                 </ListItem>
             </List>
         </Drawer>
+        </div>
           )
 }
 
