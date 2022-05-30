@@ -1,12 +1,19 @@
-import { ArrowDownward, ArrowUpward, KeyboardArrowDown, KeyboardArrowLeft, KeyboardArrowRight, KeyboardArrowUp, Star } from "@mui/icons-material";
+import {
+  ArrowDownward,
+  ArrowUpward,
+  KeyboardArrowDown,
+  KeyboardArrowLeft,
+  KeyboardArrowRight,
+  KeyboardArrowUp,
+  Star,
+} from "@mui/icons-material";
 import { IconButton, Typography } from "@mui/material";
 import * as React from "react";
 import { usePagination, useSortBy, useTable } from "react-table";
 import "../Styles/sample.css";
 
-
 const json_data = [
-  { id: 1, lastName: "Snow", firstName: "Jon", age: 35},
+  { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
   { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
   { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
   { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
@@ -18,30 +25,71 @@ const json_data = [
 ];
 
 export default function SampleTable() {
-
   return (
-    <div  style={{display:"grid",gridTemplateColumns:"1fr 3fr 1fr 1fr",width:"100%"}}>
-
-          <Typography>Customer</Typography>
-          <Typography>Subject</Typography>
-          <Typography sx={{whiteSpace:"nowrap"}}>Waiting Since</Typography>
-          <Typography></Typography>
-          {
-            json_data.map(data=>{
-             return  <>
-              <div><Typography>{data.id}</Typography></div>
-          <Typography sx={{padding:"5px"}}><p style={{whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",maxWidth:"430px"}}>lorem13sdjhgkjsdfvkjriuetiuwer8t nskdbvkjbiuy983wurojmnc sdfasdfasfas</p>
-          <p style={{whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",maxWidth:"430px"}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi dolorum rem.
-          </p></Typography>
-          <Typography sx={{padding:"5px"}}>
-            sdkjafjksda
-          </Typography>
-          <Typography style={{maxWidth:"50px"}}><Star/></Typography>
-              </>
-            })
-          }
-
+    <div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 40% 1fr 1.1fr",
+          columnGap:"20px",
+          borderBottom: "1px solid black",
+          boxShadow:"0px 0px 0px 1px #E0E0E0",
+          paddingTop:"7px",
+          paddingBottom:"7px"
+        }}
+      >
+        <Typography variant="h5">Customer</Typography>
+        <Typography variant="h5">Subject</Typography>
+        <Typography variant="h5" width={200}>Waiting Since</Typography>
+        <Typography> </Typography>
+      </div>
+      {json_data.map((data) => {
+        return (
+          <>
+            <div
+            // className="child-container"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 3fr 1fr 1fr",
+                columnGap:"100px",
+                borderBottom: "1px solid black",
+                boxShadow: "inset 0px -1px 0px rgba(0, 0, 0, 0.06)",
+              }}
+            >
+              <Typography className="centered-data">{data.id}</Typography>
+              <Typography >
+                <p
+                  style={{
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    maxWidth: "390px",
+                    fontWeight:"bold"
+                  }}
+                >
+                  lorem13sdjhgkjsdfvkjriuetiuwer8t nskdbvkjbiuy983wurojmnc
+                  sdfasdfasfas
+                </p>
+                <p
+                  style={{
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    maxWidth: "390px",
+                  }}
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellat excepturi dolorum rem.
+                </p>
+              </Typography>
+              <Typography className="centered-data">22/22/22</Typography>
+              <Typography className="centered-data">
+                <Star />
+              </Typography>
+            </div>
+          </>
+        );
+      })}
     </div>
   );
 }

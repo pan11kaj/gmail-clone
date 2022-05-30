@@ -2,3 +2,17 @@
     display: flex;
     
 }
+
+.centered-data{
+    display: flex;
+    align-items: center;
+}
+.child-container{
+    display: none;
+}
+
+@media (max-width:972px) {
+    .child-container{
+        display: none;
+    }
+}

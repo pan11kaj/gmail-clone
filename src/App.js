@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './App.css';
 import DrawerNavigator from './Components/Drawer';
+import GridTable from './Components/GridTable';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import SampleTable from './Components/SampleTable';
@@ -13,8 +14,8 @@ function App() {
 
   return (
    <>
-
-    <SampleTable/>
+    <GridTable/>
+    {/* <SampleTable/> */}
     {/* <Navbar setDrawerState={setDrawerWidth}/>
         <div style={{display:"grid",gridTemplateColumns:`${drawerWidth} auto`}}>
         <DrawerNavigator state={drawerWidth}/>
