@@ -27,7 +27,7 @@ export default function Navbar({ setDrawerState }) {
         >
           <Menu fontSize="large" />
         </IconButton>
-        <img src="/assets/maillogo.png" className="gmail-logo" width={70} height={70} />
+        {/* <img src="/assets/maillogo.png" className="gmail-logo" width={70} height={70} /> */}
 
         <TextField
           InputProps={{
